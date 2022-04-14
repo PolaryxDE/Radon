@@ -10,7 +10,7 @@ internal class MemoryStorage : IDataStorage
         new User
         {
             Id = Guid.Parse("ad892b0b-efef-4280-b39a-7fa0069b3c5f"),
-            Username = "DasDarki",
+            Username = "Test",
             Password = "Test123",
             Roles = new List<Roles>
             {
