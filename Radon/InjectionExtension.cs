@@ -18,12 +18,12 @@ public static class InjectionExtension
     /// Configures Radon and prepares the application for use of it.
     /// </summary>
     /// <param name="services">The service collection to which Radon will be added.</param>
-    /// <param name="storage">The <see cref="IDataStorage"/> which Radon should use.</param>
     /// <param name="configuration">The configuration of Radon, if omitted, default Radon will be used.</param>
-    public static IServiceCollection ConfigureRadon(this IServiceCollection services, IDataStorage storage, RadonConfiguration? configuration = null)
+    /// <typeparam name="T">The type which implements the <see cref="IDataStorage"/> interface. Will be added as singleton to the services.</typeparam>
+    public static IServiceCollection ConfigureRadon<T>(this IServiceCollection services, RadonConfiguration? configuration = null) where T : class, IDataStorage
     {
         services.AddSingleton(configuration ?? new RadonConfiguration());
-        services.AddSingleton(storage);
+        services.AddSingleton<IDataStorage, T>();
         services.AddSingleton<JwtService>();
         services.AddSingleton<AuthService>();
         

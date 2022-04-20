@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.ConfigureRadon(new MemoryStorage()).AddVoters();
+builder.Services.ConfigureRadon<MemoryStorage>().AddVoters();
 
 builder.Services.AddCors();
 builder.Services.AddControllers();

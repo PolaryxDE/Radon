@@ -4,6 +4,18 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Radon</Title>
+        <Authors>Polaryx.de</Authors>
+        <Description>Radon is an easy to use Authorization library for ASP.NET which uses JWT with Refresh Tokens and voters for special authorization.</Description>
+        <Copyright>(c) 2022 Polaryx</Copyright>
+        <PackageProjectUrl>https://github.com/PolaryxDE/Radon</PackageProjectUrl>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/PolaryxDE/Radon/develop/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://i.imgur.com/2qZBSXU.png</PackageIconUrl>
+        <RepositoryUrl>https://github.com/PolaryxDE/Radon.git</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>ASP.NET, OAuth2</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
